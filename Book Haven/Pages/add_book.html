@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Book</title>
+  <link rel="stylesheet" href="/Style/shared.css">
+  <link rel="stylesheet" href="/Style/style_add_book.css">
+</head>
+<body>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="indexAdmin.html">Home</a></li>
+    </ul>
+  </nav>
+
+  <div class="form-container">
+    <h2>Add New Book</h2>
+    <form onsubmit="handleAdd(event)">
+      <label for="bookID">Book ID:</label>
+      <input type="text" id="bookID" name="bookID" required>
+
+      <label for="title">Book Title:</label>
+      <input type="text" id="title" name="title" required>
+
+      <label for="author">Author:</label>
+      <input type="text" id="author" name="author" required>
+
+      <label for="category">Category:</label>
+      <input type="text" id="category" name="category" required>
+
+      <label for="image">Book Cover Image:</label>
+      <input type="file" id="image" name="image" accept="image/*" required>
+
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" required></textarea>
+
+      <div id="add-error" style="color:red; margin-bottom:1em;"></div>
+      <button type="submit">Add Book</button>
+      
+    </form>
+  </div>
+  <script src="../Scripts/add_book.js"></script>
+  <!-- <script>
+    function handleAdd(event) {
+      event.preventDefault();
+      alert("Book added successfully!");
+    }
+  </script> -->
+</body>
+</html>

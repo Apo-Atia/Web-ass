@@ -1,0 +1,251 @@
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* COLOR VARIABLES */
+:root {
+    --primary-color: rgba(236,236,227,255);
+    --secondary-color: #CDD3DE;
+    --accent-color: rgb(77, 76, 76);
+    --background-color: #e9e9e9;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --white-color: #FFF;
+    --black-color: #000;
+    --input-border-color: #E3E4E6;
+    --text-color: #535354;
+    --transition: 0.3s ease;
+}
+
+/* GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background-color);
+}
+
+
+/* NAVBAR STYLES */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 30px;
+    background-color: var(--white-color);
+    box-shadow: 0 2px 10px var(--shadow-color);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.nav-home-btn {
+    padding: 8px 20px;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border-radius: 30px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-home-btn:hover {
+    background-color:  var(--accent-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+
+
+/* WRAPPER STYLES (COMMON TO BOTH FORMS) */
+.wrapper {
+    position: relative;
+    width: 430px;
+    background-color: var(--white-color);
+    border-radius: 15px;
+    padding: 80px 32px 40px;
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 8px 15px var(--shadow-color);
+    overflow: hidden;
+}
+
+/* FORM HEADER (COMMON) */
+.form-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--primary-color);
+    border-radius: 15px 15px 0 0;
+}
+
+.form-title {
+    color: var(--text-color);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* FORM STYLES (COMMON) */
+.login-form, .register-form {
+    width: 100%;
+}
+
+/* INPUT FIELDS (COMMON) */
+.input-box {
+    position: relative;
+    margin: 25px 0;
+}
+
+.input-field {
+    width: 100%;
+    height: 55px;
+    font-size: 16px;
+    background: transparent;
+    color: var(--accent-color);
+    padding: 0 45px 0 20px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 30px;
+    outline: none;
+    transition: var(--transition);
+}
+
+.input-field:focus {
+    border-color: var(--accent-color);
+}
+
+.label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: var(--text-color);
+    transition: var(--transition);
+    pointer-events: none;
+}
+
+.input-field:focus ~ .label,
+.input-field:not(:placeholder-shown) ~ .label {
+    top: 0;
+    font-size: 14px;
+    background-color: var(--white-color);
+    color: var(--accent-color);
+    padding: 0 10px;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+/* FORM SPECIFIC STYLES */
+/* Login Form Specific */
+.login-wrapper .form-header {
+    background-color: var(--primary-color);
+}
+
+.login-wrapper .btn-submit {
+    background-color: var(--primary-color);
+}
+
+/* Register Form Specific */
+.register-wrapper .form-header {
+    background-color: var(--primary-color);
+}
+
+.register-wrapper .btn-submit {
+    background-color: var(--primary-color);
+}
+
+/* FORM FOOTER ELEMENTS (COMMON) */
+.form-cols {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    align-items: flex-start;
+    margin: 20px 10px;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.form-cols a {
+    color: var(--accent-color);
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* BUTTON STYLES (COMMON) */
+.btn-submit {
+    width: 100%;
+    height: 50px;
+    color: var(--accent-color);
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-submit:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* SWITCH FORM LINK (COMMON) */
+.switch-form {
+    text-align: center;
+    margin-top: 25px;
+    color: var(--text-color);
+}
+
+.switch-form a {
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+/* RESPONSIVE STYLES */
+@media only screen and (max-width: 480px) {
+    .wrapper {
+        width: 90%;
+        padding: 60px 20px 30px;
+    }
+    
+    .form-header {
+        padding: 15px 0;
+    }
+    
+    .form-title {
+        font-size: 20px;
+    }
+}

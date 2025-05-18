@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Book</title>
+    <link rel="stylesheet" href="/Style/shared.css">
+    <link rel="stylesheet" href="/Style/style_edit_book.css">
+</head>
+<body>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="indexAdmin.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <div class="edit-container">
+        <h1>Edit Book</h1>
+
+        <label for="bookSelect">Select Book:</label>
+        <select id="bookSelect" name="bookSelect">
+            <option value="1">Book "Book of Tea" - Author "Kakuzo Okakura"</option>
+            <option value="2">Book "The Herbwitch Princess" - Author "Nina George"</option>
+            <option value="3">Book "All Around The Moon" - Author "Jules Verne"</option>
+        </select>
+
+        <form action="#" onsubmit="return false;" method="post" class="edit-form">
+            <label for="bookID">Book ID:</label>
+            <input type="text" id="bookID" name="bookID" value="1" disabled>
+
+            <label for="bookName">Book Name:</label>
+            <input type="text" id="bookName" name="bookName" value="Book of Tea">
+
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" value="Author Kakuzo Okakura">
+
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" value="Fiction">
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description">A brief description of the book...</textarea>
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+
+</body>
+<script src="/Scripts/edit_book.js"></script>
+</html>

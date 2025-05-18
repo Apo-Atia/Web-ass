@@ -1,0 +1,37 @@
+.role-login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+  }
+  
+  .role-login-container h2 {
+    color: rgb(77, 76, 76);
+    margin-bottom: 30px;
+  }
+  
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .login-btn {
+    background-color:rgba(236,236,227,255);
+    color: rgb(77, 76, 76);
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .login-btn:hover {
+    background-color: #9c7b5b;
+    color: #ffffff;
+  }
+  

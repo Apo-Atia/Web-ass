@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOXICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Style/login_signup.css">
+    <title>Login | Book Haven</title>
+</head>
+<body>
+    
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <a href="#" class="nav-logo">Book Haven</a>
+            <a href="/index.html" class="nav-home-btn">Home</a>
+        </nav>
+
+
+    <div class="wrapper login-wrapper">
+        <div class="form-header">
+            <h1 class="form-title">Login</h1>
+        </div>
+        
+        <!-- LOGIN FORM -->
+        <form action="#" class="login-form" autocomplete="off">
+            <div class="input-box">
+                <input type="text" class="input-field" id="log-email" required>
+                <label for="log-email" class="label">Email</label>
+                <i class='bx bx-envelope icon'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" id="log-pass" required>
+                <label for="log-pass" class="label">Password</label>
+                <i class='bx bx-lock-alt icon'></i>
+            </div>
+            <div class="input-box">
+                <input type="checkbox" id="is-admin">
+                <label for="is-admin"> Login as Admin</label>
+            </div>
+            <div id="error-msg" style="color:red; margin-bottom:1em;"></div>
+
+            <div class="form-cols">
+                <div class="col-1"></div>
+                <div class="col-2">
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+            </div>
+
+            
+            <div class="input-box">
+                <button class="btn-submit" >Sign In <i class='bx bx-log-in'></i></button>
+            </div>
+            <div class="switch-form">
+                <span>Don't have an account? <a href="/Pages/SignUp.html" class="switch-link">Sign Up</a></span>
+            </div>
+        </form>
+    </div>
+    <script src="../Scripts/auth.js"></script>
+
+</body>
+</html>
